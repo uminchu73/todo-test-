@@ -6,7 +6,7 @@ Todoの新規作成、編集更新、削除までできます。
 ## Usage
 
 ```
-git clone git@github.com:uminchu73/todo.git
+git clone 
 ```
 
 ```
