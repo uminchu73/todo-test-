@@ -9,13 +9,22 @@
 @section('content')
     {{-- フラッシュメッセージ --}}
     <div class="todo-alert">
-        @if (session('success'))
-        <div class="todo-alert__success">
-            {{ session('success')}}
-        </div>
+        {{-- 成功メッセージ --}}
+        @if (session('message'))
+            <div class="todo-alert__success">
+                {{ session('message')}}
+            </div>
         @endif
-        <div class="todo-alert__error">
-        </div>
+        {{-- エラーメッセージ --}}
+        @if ($errors->any())
+            <div class="todo-alert__error">
+                <ul>
+                    @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+            </div>
+        @endif
 
         {{-- 新規作成 --}}
         <div class="todo-content">
@@ -45,6 +54,7 @@
                                 <div class="update-form__item">
                                     {{-- 入力欄 --}}
                                     <input type="text" class="update-form__box" name="content" value="{{ $todo['content'] }}">
+                                    <input type="hidden" name="id" value="{{ $todo['id'] }}">
                                 </div>
                                 {{-- 更新ボタン --}}
                                 <button class="update-btn__submit" type="submit">更新</button>
@@ -56,6 +66,7 @@
                                 @csrf
                                 @method('DELETE')
                                 {{-- 削除ボタン --}}
+                                <input type="hidden" name="id" value="{{ $todo['id'] }}">
                                 <button class="delete-btn__submit" type="submit">削除</button>
                             </form>
                         </td>

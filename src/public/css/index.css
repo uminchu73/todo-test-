@@ -14,7 +14,10 @@
 
 .todo-alert__error ul {
     margin: 0;
+    padding-left: 0;
+    list-style: none;
 }
+
 
 .todo-content {
     margin: 0 auto;
@@ -68,7 +71,7 @@
 }
 
 .todo-table__row {
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid #ccc;
 }
 
 .todo-table__item:first-of-type {
@@ -112,5 +115,3 @@
     color: #fff;
     cursor: pointer;
 }
-
-
