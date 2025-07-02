@@ -31,7 +31,7 @@
             <form action="/todos" class="form" method="post">
                 @csrf
                 {{-- 入力欄 --}}
-                <input type="text" class="form-box" name="content">
+                <input type="text" class="form-box" name="content" value="{{ old('content') }}">
                 {{-- 作成ボタン --}}
                 <button class="create-btn" type="submit">作成</button>
             </form>
