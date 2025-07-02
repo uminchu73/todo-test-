@@ -1,7 +1,7 @@
 .todo-alert__success {
     background-color: #d1e7dd;
     color: #0f5132;
-    padding: 12px 20px;
+    padding: 12px 20px;/*内側の余白（上下12px 左右２０px）*/
     border: 1px solid #badbcc;
 }
 
@@ -13,23 +13,23 @@
 }
 
 .todo-alert__error ul {
-    margin: 0;
-    padding-left: 0;
-    list-style: none;
+    margin: 0;/*上下余白なし*/
+    padding-left: 0;/*左の余白なし*/
+    list-style: none;/*デフォルトのリストマーカーを消す*/
 }
 
 
 .todo-content {
-    margin: 0 auto;
+    margin: 0 auto;/*左右中央よせ*/
     padding: 60px 15px;
     max-width: 1230px;
 }
 
 .form {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 0 auto;
+    display: flex;/*横並びに*/
+    justify-content: space-between;/*均等配置*/
+    align-items: center;/*縦方向中央揃え*/
+    margin: 0 auto;/*フォーム自体を中央寄せ*/
     width: 70%;
 }
 
@@ -49,13 +49,13 @@
     border-radius: 6px;
     width: 20%;
     height: 40px;
-    cursor: pointer;
+    cursor: pointer;/*カーソルを手に*/
 }
 
 .todo-table {
-    margin: 30px auto;
+    margin: 30px auto;/*上下３０pxの余白、左右中央寄せ*/
     width: 70%;
-    text-align: left;
+    text-align: left;/*テキスト左寄せ*/
 }
 
 .todo-table__inner {

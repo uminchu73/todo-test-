@@ -54,6 +54,7 @@
                                 <div class="update-form__item">
                                     {{-- 入力欄 --}}
                                     <input type="text" class="update-form__box" name="content" value="{{ $todo['content'] }}">
+                                    {{-- 更新するTodoのIDを送る --}}
                                     <input type="hidden" name="id" value="{{ $todo['id'] }}">
                                 </div>
                                 {{-- 更新ボタン --}}
@@ -65,8 +66,9 @@
                             <form action="/todos/delete" class="delete-form" method="post">
                                 @csrf
                                 @method('DELETE')
-                                {{-- 削除ボタン --}}
+                                {{-- 削除するTodoのIDを送る --}}
                                 <input type="hidden" name="id" value="{{ $todo['id'] }}">
+                                {{-- 削除ボタン --}}
                                 <button class="delete-btn__submit" type="submit">削除</button>
                             </form>
                         </td>
